@@ -1,7 +1,7 @@
-//1° Inicializar o Node "npm init -y" 
-//2º Instalar o framework Express "npm install express"
+//1° Inicializar o Node: npm init -y
+//2º Instalar o framework Express: npm install express
 
-//3º Importar o framework Express para o server.js
+//3º Importar o framework Express no arquivo: server.js
 const express = require('express');
 //4º Criar uma instância do express
 const app = express();
@@ -20,4 +20,5 @@ app.listen(port, ()=> {
     , ()=> {console.log(`Servidor está rodando em http://localhost:${port}`)} dentro dele é apenas uma "Perfumaria"...
     ...para mostrar no console, que o código funcionou. */
 
-//7º Rodar o Servidor no terminal "node server.js"
+//7º Ligar o Servidor no terminal: node server.js
+//8º Desligar o Servidor no terminal: Ctrl + C
