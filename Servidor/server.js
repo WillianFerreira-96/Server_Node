@@ -43,3 +43,14 @@ app.listen(port, ()=> {
 
 //Ligar o Servidor no terminal: node server.js
 //Desligar o Servidor no terminal: Ctrl + C
+
+app.post('/api/usuario', (req, res) => {
+  const { nome, senha } = req.body;
+  const sql = 'INSERT INTO usuario (nome, senha) VALUES (?, ?)';
+  connection.query(sql, [nome, senha], (err, results) => {
+    if (err) {
+      return res.status(500).send(err);
+    }
+    res.status(201).send({ id: results.insertId, nome, senha });
+  });
+});
